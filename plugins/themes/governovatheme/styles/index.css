@@ -10,11 +10,25 @@
     box-sizing: border-box;
 }
 
+:root {
+    --governova-blue: #0b4aa2;
+    --governova-blue-dark: #0a2f6b;
+    --governova-blue-light: #1d6cd3;
+    --governova-gray: #e6edf3;
+    --governova-border: #d6dde5;
+    --governova-text: #1f2937;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: #f8f9fa;
+    color: var(--governova-text);
+    background-color: #eaf2f7;
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 0),
+        radial-gradient(rgba(255, 255, 255, 0.45) 1px, transparent 0);
+    background-size: 80px 80px, 140px 140px;
+    background-position: 0 0, 20px 30px;
 }
 
 .container {
@@ -26,8 +40,8 @@ body {
 /* === HEADER === */
 .pkp_structure_head {
     background: white;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 18px 0;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -59,7 +73,7 @@ body {
 .pkp_navigation_primary a,
 .pkp_navigation_primary li a {
     text-decoration: none;
-    color: #1a365d;
+    color: var(--governova-blue-dark);
     font-weight: 500;
     font-size: 15px;
     transition: color 0.3s;
@@ -68,20 +82,20 @@ body {
 .pkp_navigation_primary a:hover,
 .pkp_navigation_primary a.active,
 .pkp_navigation_primary li.current a {
-    color: #2563eb;
+    color: var(--governova-blue-light);
 }
 
 /* === HERO/BANNER SECTION === */
 .pkp_page_index .homepage-image,
 .homepage-image {
     background: white;
-    padding: 50px 0;
+    padding: 60px 0 40px;
 }
 
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 70px;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -112,25 +126,25 @@ body {
 }
 
 .journal-tagline {
-    font-size: 28px;
-    color: #1a365d;
+    font-size: 26px;
+    color: var(--governova-blue-dark);
     font-weight: 300;
     margin-bottom: 8px;
 }
 
 .journal-title {
-    font-size: 52px;
+    font-size: 54px;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 12px;
 }
 
 .journal-title .governance {
-    color: #2563eb;
+    color: var(--governova-blue-light);
 }
 
 .journal-title .innovation {
-    color: #1a365d;
+    color: var(--governova-blue-dark);
 }
 
 .journal-subtitle {
@@ -142,11 +156,11 @@ body {
 
 /* Buttons */
 .btn-primary {
-    background: #2563eb;
+    background: var(--governova-blue-light);
     color: white !important;
-    padding: 12px 28px;
+    padding: 10px 26px;
     border: none;
-    border-radius: 5px;
+    border-radius: 18px;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
@@ -156,12 +170,12 @@ body {
 }
 
 .btn-primary:hover {
-    background: #1d4ed8;
+    background: var(--governova-blue);
 }
 
 /* === MAIN CONTENT AREA === */
 .pkp_structure_main {
-    padding: 50px 0;
+    padding: 40px 0 60px;
 }
 
 .pkp_page_wrapper,
@@ -179,8 +193,8 @@ body {
 .page_issue h1,
 .page-article h1,
 .page_about h1 {
-    font-size: 42px;
-    color: #2563eb;
+    font-size: 38px;
+    color: var(--governova-blue-light);
     margin-bottom: 30px;
     font-weight: 700;
 }
@@ -188,35 +202,37 @@ body {
 /* Article Cards */
 .obj_article_summary {
     background: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: box-shadow 0.3s;
+    padding: 20px 24px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: 1px solid var(--governova-border);
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08);
+    transition: transform 0.2s, box-shadow 0.3s;
 }
 
 .obj_article_summary:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
 }
 
 .obj_article_summary h3,
 .obj_article_summary .title {
     font-size: 18px;
     font-weight: 700;
-    color: #1a365d;
+    color: var(--governova-blue-dark);
     margin-bottom: 10px;
     line-height: 1.4;
 }
 
 .obj_article_summary h3 a,
 .obj_article_summary .title a {
-    color: #1a365d;
+    color: var(--governova-blue-dark);
     text-decoration: none;
 }
 
 .obj_article_summary h3 a:hover,
 .obj_article_summary .title a:hover {
-    color: #2563eb;
+    color: var(--governova-blue-light);
 }
 
 .obj_article_summary .authors {
@@ -241,11 +257,11 @@ body {
 
 /* Article Buttons */
 .btn-open-access {
-    background: #2563eb;
+    background: var(--governova-blue-light);
     color: white !important;
-    padding: 8px 20px;
-    border-radius: 5px;
-    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 12px;
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
@@ -257,11 +273,11 @@ body {
 .btn-read,
 .obj_galley_link,
 .download {
-    background: #dc2626;
+    background: #d92d20;
     color: white !important;
-    padding: 8px 20px;
-    border-radius: 5px;
-    font-size: 13px;
+    padding: 7px 16px;
+    border-radius: 16px;
+    font-size: 12px;
     font-weight: 600;
     text-decoration: none;
     display: inline-block;
@@ -269,7 +285,14 @@ body {
 
 .obj_galley_link:hover,
 .download:hover {
-    background: #b91c1c;
+    background: #b42318;
+}
+
+.obj_article_summary .galleys_links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
 }
 
 /* === SIDEBAR === */
@@ -283,19 +306,20 @@ body {
 .pkp_block,
 .sidebar-block {
     background: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 22px 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--governova-border);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
 }
 
 .pkp_block h2,
 .sidebar-block h2 {
     color: white;
-    background: #2563eb;
-    margin: -25px -25px 20px -25px;
-    padding: 15px 25px;
-    border-radius: 10px 10px 0 0;
+    background: var(--governova-blue);
+    margin: -22px -24px 18px -24px;
+    padding: 14px 22px;
+    border-radius: 12px 12px 0 0;
     font-size: 18px;
 }
 
@@ -314,7 +338,7 @@ body {
 
 .obj_announcement_summary h3 {
     font-weight: 700;
-    color: #2563eb;
+    color: var(--governova-blue-light);
     margin-bottom: 5px;
     font-size: 15px;
 }
@@ -339,9 +363,9 @@ body {
 }
 
 .indexing-item {
-    background: #f3f4f6;
-    padding: 12px 20px;
-    border-radius: 5px;
+    background: #f8fafc;
+    padding: 12px 16px;
+    border-radius: 6px;
     text-align: left;
     font-weight: 500;
     color: #64748b;
@@ -350,7 +374,7 @@ body {
 
 /* Statistics Block */
 .governova-stats h2 {
-    background: #1a365d !important;
+    background: var(--governova-blue-dark) !important;
 }
 
 .stat-item {
@@ -363,7 +387,7 @@ body {
     align-items: center;
 }
 
-.stat-item:nth-child(1) { background: #2563eb; }
+.stat-item:nth-child(1) { background: var(--governova-blue-light); }
 .stat-item:nth-child(2) { background: #dc2626; }
 .stat-item:nth-child(3) { background: #10b981; }
 .stat-item:nth-child(4) { background: #f59e0b; }
@@ -388,7 +412,7 @@ body {
 .about-journal {
     background: white;
     padding: 60px 0;
-    margin-top: -50px;
+    margin-top: -40px;
 }
 
 .about-content {
@@ -409,8 +433,8 @@ body {
 }
 
 .about-text h2 {
-    font-size: 52px;
-    color: #1a365d;
+    font-size: 48px;
+    color: var(--governova-blue-dark);
     margin-bottom: 5px;
     font-weight: 700;
     line-height: 1;
@@ -428,7 +452,7 @@ body {
 
 .about-text h3 {
     font-size: 28px;
-    color: #2563eb;
+    color: var(--governova-blue-light);
     margin-bottom: 20px;
 }
 
@@ -441,7 +465,7 @@ body {
 
 /* === FOOTER === */
 .pkp_structure_footer {
-    background: #1a365d;
+    background: var(--governova-blue-dark);
     color: white;
     padding: 50px 0 20px;
 }
@@ -574,7 +598,7 @@ body {
 }
 
 .submission-box {
-    background: #2563eb;
+    background: var(--governova-blue);
     color: white;
     padding: 20px;
     border-radius: 8px;
@@ -586,7 +610,7 @@ body {
 }
 
 .submission-box:hover {
-    background: #1d4ed8;
+    background: var(--governova-blue-light);
 }
 
 .submission-box h3 {
