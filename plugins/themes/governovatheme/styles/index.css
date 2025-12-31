@@ -17,18 +17,19 @@
     --governova-gray: #e6edf3;
     --governova-border: #d6dde5;
     --governova-text: #1f2937;
+    --governova-soft-blue: #eef4f9;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--governova-text);
-    background-color: #eaf2f7;
+    background-color: var(--governova-soft-blue);
     background-image:
-        radial-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 0),
-        radial-gradient(rgba(255, 255, 255, 0.45) 1px, transparent 0);
-    background-size: 80px 80px, 140px 140px;
-    background-position: 0 0, 20px 30px;
+        radial-gradient(rgba(255, 255, 255, 0.45) 1px, transparent 0),
+        radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 0);
+    background-size: 120px 120px, 200px 200px;
+    background-position: 0 0, 30px 40px;
 }
 
 .container {
@@ -40,8 +41,8 @@ body {
 /* === HEADER === */
 .pkp_structure_head {
     background: white;
-    padding: 18px 0;
-    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+    padding: 14px 0;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -58,7 +59,7 @@ body {
 
 .pkp_site_name_wrapper img,
 .pkp_site_name img {
-    height: 45px;
+    height: 42px;
     cursor: pointer;
 }
 
@@ -66,7 +67,7 @@ body {
 .pkp_navigation_primary,
 .pkp_navigation_primary ul {
     display: flex;
-    gap: 35px;
+    gap: 28px;
     list-style: none;
 }
 
@@ -75,7 +76,7 @@ body {
     text-decoration: none;
     color: var(--governova-blue-dark);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
     transition: color 0.3s;
 }
 
@@ -89,13 +90,13 @@ body {
 .pkp_page_index .homepage-image,
 .homepage-image {
     background: white;
-    padding: 60px 0 40px;
+    padding: 50px 0 35px;
 }
 
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+    gap: 60px;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -111,7 +112,7 @@ body {
 .hero-graphic svg,
 .hero-graphic img {
     width: 100%;
-    max-width: 450px;
+    max-width: 430px;
 }
 
 .hero-text {
@@ -126,14 +127,14 @@ body {
 }
 
 .journal-tagline {
-    font-size: 26px;
+    font-size: 24px;
     color: var(--governova-blue-dark);
     font-weight: 300;
     margin-bottom: 8px;
 }
 
 .journal-title {
-    font-size: 54px;
+    font-size: 50px;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 12px;
@@ -150,18 +151,18 @@ body {
 .journal-subtitle {
     font-size: 14px;
     color: #666;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     font-style: italic;
 }
 
 /* Buttons */
 .btn-primary {
-    background: var(--governova-blue-light);
+    background: var(--governova-blue);
     color: white !important;
-    padding: 10px 26px;
+    padding: 9px 22px;
     border: none;
-    border-radius: 18px;
-    font-size: 15px;
+    border-radius: 4px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
@@ -170,7 +171,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: var(--governova-blue);
+    background: var(--governova-blue-light);
 }
 
 /* === MAIN CONTENT AREA === */
@@ -193,8 +194,8 @@ body {
 .page_issue h1,
 .page-article h1,
 .page_about h1 {
-    font-size: 38px;
-    color: var(--governova-blue-light);
+    font-size: 36px;
+    color: var(--governova-blue);
     margin-bottom: 30px;
     font-weight: 700;
 }
@@ -202,16 +203,16 @@ body {
 /* Article Cards */
 .obj_article_summary {
     background: white;
-    padding: 20px 24px;
+    padding: 18px 22px;
     margin-bottom: 18px;
-    border-radius: 12px;
+    border-radius: 8px;
     border: 1px solid var(--governova-border);
-    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
     transition: transform 0.2s, box-shadow 0.3s;
 }
 
 .obj_article_summary:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
 }
 
@@ -257,10 +258,10 @@ body {
 
 /* Article Buttons */
 .btn-open-access {
-    background: var(--governova-blue-light);
+    background: #2563eb;
     color: white !important;
-    padding: 6px 14px;
-    border-radius: 16px;
+    padding: 4px 10px;
+    border-radius: 4px;
     font-size: 12px;
     font-weight: 600;
     text-decoration: none;
@@ -275,8 +276,8 @@ body {
 .download {
     background: #d92d20;
     color: white !important;
-    padding: 7px 16px;
-    border-radius: 16px;
+    padding: 5px 12px;
+    border-radius: 4px;
     font-size: 12px;
     font-weight: 600;
     text-decoration: none;
@@ -306,9 +307,9 @@ body {
 .pkp_block,
 .sidebar-block {
     background: white;
-    padding: 22px 24px;
+    padding: 20px 22px;
     margin-bottom: 24px;
-    border-radius: 12px;
+    border-radius: 8px;
     border: 1px solid var(--governova-border);
     box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
 }
@@ -317,10 +318,10 @@ body {
 .sidebar-block h2 {
     color: white;
     background: var(--governova-blue);
-    margin: -22px -24px 18px -24px;
-    padding: 14px 22px;
-    border-radius: 12px 12px 0 0;
-    font-size: 18px;
+    margin: -20px -22px 18px -22px;
+    padding: 12px 20px;
+    border-radius: 8px 8px 0 0;
+    font-size: 16px;
 }
 
 /* Announcements in Sidebar */
@@ -364,12 +365,12 @@ body {
 
 .indexing-item {
     background: #f8fafc;
-    padding: 12px 16px;
-    border-radius: 6px;
+    padding: 10px 14px;
+    border-radius: 4px;
     text-align: left;
     font-weight: 500;
-    color: #64748b;
-    font-size: 15px;
+    color: #5b6776;
+    font-size: 14px;
 }
 
 /* Statistics Block */
@@ -378,9 +379,9 @@ body {
 }
 
 .stat-item {
-    padding: 18px 20px;
+    padding: 16px 18px;
     margin-bottom: 10px;
-    border-radius: 8px;
+    border-radius: 6px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -411,7 +412,7 @@ body {
 /* === ABOUT SECTION === */
 .about-journal {
     background: white;
-    padding: 60px 0;
+    padding: 55px 0;
     margin-top: -40px;
 }
 
@@ -433,7 +434,7 @@ body {
 }
 
 .about-text h2 {
-    font-size: 48px;
+    font-size: 44px;
     color: var(--governova-blue-dark);
     margin-bottom: 5px;
     font-weight: 700;
