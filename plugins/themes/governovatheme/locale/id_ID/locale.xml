@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../lib/pkp/dtd/locale.dtd">
+<locale name="id_ID" full_name="Bahasa Indonesia">
+    <message key="plugins.themes.governovatheme.displayName">Tema Governova</message>
+    <message key="plugins.themes.governovatheme.description">Tema kustom untuk Governova Journal - Journal of Governance and Public Innovation</message>
+    <message key="plugins.themes.default.option.colour.label">Warna</message>
+</locale>
